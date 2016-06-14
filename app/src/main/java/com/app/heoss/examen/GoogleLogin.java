@@ -36,9 +36,6 @@ public class GoogleLogin extends Activity implements OnClickListener, Connection
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_google);
 
-		android.app.ActionBar bar = getActionBar();
-		bar.setDisplayShowHomeEnabled(true);
-
 		findViewById(R.id.sign_in_button).setOnClickListener(this);
 		signOutButton = (Button) findViewById(R.id.sign_out_button);
 		signOutButton.setOnClickListener(this);
@@ -53,10 +50,6 @@ public class GoogleLogin extends Activity implements OnClickListener, Connection
 				.addOnConnectionFailedListener(this)
 				.addApi(Plus.API, Plus.PlusOptions.builder().build())
 				.addScope(Plus.SCOPE_PLUS_LOGIN).build();
-		/*new GoogleApiClient.Builder(this).addConnectionCallbacks(this)
-				.addOnConnectionFailedListener(this)
-				.addApi(Plus.API, PlusOptions.builder().build())
-				.addScope(Plus.SCOPE_PLUS_LOGIN).build();*/
 	}
 
 	@Override
