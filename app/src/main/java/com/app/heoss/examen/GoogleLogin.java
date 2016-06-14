@@ -46,7 +46,8 @@ public class GoogleLogin extends Activity implements OnClickListener, Connection
 
 	//acceso a API para GoogleApiClient
 	private GoogleApiClient buildGoogleAPIClient() {
-		return new GoogleApiClient.Builder(this).addConnectionCallbacks(this)
+		return new GoogleApiClient.Builder(this)
+				.addConnectionCallbacks(this)
 				.addOnConnectionFailedListener(this)
 				.addApi(Plus.API, Plus.PlusOptions.builder().build())
 				.addScope(Plus.SCOPE_PLUS_LOGIN).build();
