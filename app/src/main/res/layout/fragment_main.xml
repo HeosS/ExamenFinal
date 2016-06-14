@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main"
+    tools:context="com.app.heoss.examen.MainActivityFragment"
+    style="@style/container_action_black"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/action_1"
+        style="@style/sub_title_white"
+        android:id="@+id/loginFaceText"
+        android:layout_centerHorizontal="true"/>
+
+    <com.facebook.login.widget.ProfilePictureView
+        android:id="@+id/profilePicture"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_above="@+id/text_details"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/text_details"
+        android:layout_above="@+id/login_facebook"
+        style="@style/sub_title_white"
+        android:layout_marginBottom="10dp"
+        android:text="Sesión no iniciada"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_facebook"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

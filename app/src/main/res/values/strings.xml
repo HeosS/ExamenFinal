@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Examen Final</string>
+    <string name="cargando">Cargando...</string>
+
+    <string name="bienvenida">Bienvenido/a</string>
+    <string name="descripcion">En esta aplicación podrás iniciar sesión ocupando Facebook o Google+, además podras probar la Api de Youtube.</string>
+    <string name="descripcion_2">Hola que deseas hacer</string>
+    <string name="ingresar">INGRESAR</string>
+
+    <string name="item1">Acerca de</string>
+    <string name="item2">Salir</string>
+
+    <string name="action_1">Iniciar sesión con Facebook</string>
+    <string name="action_2">Iniciar sesión con Google+</string>
+    <string name="action_3">Ver video con Api de Youtube</string>
+
+    <string name="Error_Reproduccion">Error en la reproducción.</string>
+
+    <string name="id_banner">ca-app-pub-5113252486740558/5615515620</string>
+    <string name="id_facebook">1743753412503659</string>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/container"
+    android:fitsSystemWindows="true"
+    tools:context="com.app.heoss.examen.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scaleType="centerCrop"
+        android:padding="0dp"
+        android:layout_below="@+id/view"
+        android:layout_above="@+id/ad_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/container_action">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/image_top"
+                    android:src="@drawable/users_inicio"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:text="@string/descripcion_2"
+                    style="@style/title_white"
+                    android:id="@+id/text"
+                    android:layout_below="@id/image_top"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/content_main" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:context="com.app.heoss.examen.GoogleLogin"
+                style="@style/container_action"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/action_2"
+                    style="@style/sub_title_white"
+                    android:id="@+id/loginGoogleText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Ir a iniciar sesión"
+                    style="@style/boton"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/container_action_black">
+
+                <TextView
+                    android:text="@string/action_3"
+                    style="@style/sub_title_white"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video de Youtube"
+                    android:id="@+id/button_youtube"
+                    style="@style/boton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_view"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/id_banner">
+
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
